@@ -1,0 +1,9 @@
+# Ignore the virtual environment directory
+.venv/
+
+# Optional: Add other common Python ignores
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/

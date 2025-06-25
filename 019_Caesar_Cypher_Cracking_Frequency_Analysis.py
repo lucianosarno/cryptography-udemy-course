@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import string
 import logging # Import the logging module
+import sys
 
 # Configure logging
 # Log messages with level INFO or higher will be displayed
@@ -118,3 +119,19 @@ if __name__ == "__main__":
     print(f"Key found (Example 2): {key_found_known}") # Should find key 3 and decrypt to ATTACK
 
     logging.info("--- Script End ---")
+    
+    
+# Main execution block
+if __name__ == "__main__":
+    # Check if a command-line argument was provided
+    if len(sys.argv) > 1:
+        # If yes, use the first argument as the ciphertext
+        input_ciphertext = sys.argv[1]
+        print(f"[*] Using ciphertext provided via command line: '{input_ciphertext}'")
+    else:
+        # If no argument was provided, use the default hardcoded example
+        input_ciphertext = "khoorzcruog" # Or "vjku bkscuug" from the lecture example
+        print(f"[*] No command-line argument provided. Using default example ciphertext: '{input_ciphertext}'")
+
+    # Now call the cracking function with the selected ciphertext
+    frequency_analysis(input_ciphertext)
