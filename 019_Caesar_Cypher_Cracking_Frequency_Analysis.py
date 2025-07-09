@@ -6,7 +6,7 @@ from collections import Counter
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # --- Alphabet (Uppercase as per lecture) ---
-ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ALPHABET = " ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ALPHABET_SIZE = len(ALPHABET)
 
 # --- Expected Most Frequent Letter in English ---
